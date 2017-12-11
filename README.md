@@ -5,11 +5,16 @@ Ansible playbooks to perform blue green deployments to PCF
 The play command will take the following parameters:
 
 pcf_api_endpoint - PCF Apps Manager endpoint (eg) api.dev.kbalacha.com
+
 space - Space within the foundation to deploy to. (eg) Dev, Test
+
 artifact_location - Location of deployable jar/war in artifactory/nexus. It is downloaded to /var/tmp
+
 app_name - Name of application
+
 branch_name - Name of branch to check out manifest.yml from. Mostly this is master for prod, develop for non prod. The play is configured to check out from a gitlab location. It constructs the full path of git location using app name
-blue_green_route - The blue green route to take. Scroll down for more information on routes. By default route 2 is chosen.
+
+blue_green_route - The blue green route to take. Scroll down for more information on routes. By default route 2 is chosen
 
 Sample ansible playbook exection command:
 
